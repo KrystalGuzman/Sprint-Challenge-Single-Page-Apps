@@ -44,7 +44,7 @@ export default function CharacterList() {
             
           )
         }
-        )}
-      </div>
+      )}
+    </div>
   )
 }

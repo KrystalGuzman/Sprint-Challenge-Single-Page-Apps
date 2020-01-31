@@ -40,7 +40,7 @@ const LocationCard = props => {
                 <Font>Dimension: {props.dimension}</Font>
             </Columns>
         </Card>
-  )
+    )
 }
 
 

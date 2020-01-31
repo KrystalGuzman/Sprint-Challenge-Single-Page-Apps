@@ -28,25 +28,25 @@ export default function Header() {
       <Link to="/episodes" class="navbar-brand">Episodes</Link>
       <Link to="/search" class="navbar-brand">Search</Link> */}
 
-
-<Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-  Menu
-</Button>
-<Menu
-  id="fade-menu"
-  anchorEl={anchorEl}
-  keepMounted
-  open={open}
-  onClose={handleClose}
-  TransitionComponent={Fade}
->
-  <MenuItem onClick={handleClose}><Link to="/" class="navbar-brand">Home</Link></MenuItem>
-  <MenuItem onClick={handleClose}><Link to="/characters" class="navbar-brand">Characters</Link></MenuItem>
-  <MenuItem onClick={handleClose}><Link to="/locations" class="navbar-brand">Locations</Link></MenuItem>
-  <MenuItem onClick={handleClose}><Link to="/episodes" class="navbar-brand">Episodes</Link></MenuItem>
+{/* added material ui components */}
+      <Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+        Menu
+      </Button>
+      <Menu
+        id="fade-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Fade}
+      >
+      <MenuItem onClick={handleClose}><Link to="/" class="navbar-brand">Home</Link></MenuItem>
+      <MenuItem onClick={handleClose}><Link to="/characters" class="navbar-brand">Characters</Link></MenuItem>
+      <MenuItem onClick={handleClose}><Link to="/locations" class="navbar-brand">Locations</Link></MenuItem>
+      <MenuItem onClick={handleClose}><Link to="/episodes" class="navbar-brand">Episodes</Link></MenuItem>
   
-</Menu>
-    </header>
+    </Menu>
+  </header>
 
 
   );

@@ -1,4 +1,4 @@
-//Search in each List
+//Search in each List component
 
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";

@@ -40,7 +40,7 @@ const EpisodeCard = props => {
                 <Font>Episode: {props.episode}</Font>
             </Columns>
         </Card>
-  )
+    )
 }
 
 
