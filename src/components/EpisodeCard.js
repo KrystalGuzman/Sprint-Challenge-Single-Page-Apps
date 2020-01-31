@@ -30,18 +30,18 @@ padding-bottom: ${props =>(props.primary ? `30px` : `20px`)};
 `;
 
 
-const LocationCard = props => {
+const EpisodeCard = props => {
     console.log(props);
     return (
         <Card>
             <Columns>
                 <Font primary>{props.name}</Font>
-                <Font>Type: {props.type}</Font>
-                <Font>Dimension: {props.dimension}</Font>
+                <Font>Air Date: {props.air_date}</Font>
+                <Font>Episode: {props.episode}</Font>
             </Columns>
         </Card>
     )
 }
 
 
-export default LocationCard;
+export default EpisodeCard;

@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CharacterCard from "./CharacterCard";
+import EpisodeCard from "./EpisodeCard";
 
-export default function CharacterList() {
+export default function EpisodesList() {
+  // TODO: Add useState to track data from useEffect
 
 
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   useEffect(() => {
     axios
-      .get(`https://rickandmortyapi.com/api/character`)
+      .get(`https://rickandmortyapi.com/api/episode`)
       .then(response => {
-        const characters = response.data.results.filter(character =>
-          character.name.toLowerCase().includes(query.toLowerCase())
+        const episodes = response.data.results.filter(episode =>
+          episode.name.toLowerCase().includes(query.toLowerCase())
         );
-        setData(characters);
+        setData(episodes);
       });
   }, [query]);
   
@@ -33,13 +34,12 @@ export default function CharacterList() {
           placeholder="search by name"
         />
       </form>
-        {data.map(character => {
+        {data.map(episode => {
           return (
-            <CharacterCard
-            name={character.name}
-            image={character.image}
-            species={character.species}
-            status={character.status}
+            <EpisodeCard
+            name={episode.name}
+            air_date={episode.air_date}
+            episode={episode.episode}
           />
             
           )
