@@ -18,13 +18,13 @@ const Columns = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: 10px;
+padding: 5px;
 `;
 
 const PicBox = styled.div`
 width: 200px;
 height: 200px;
-padding: 10px;
+padding: 5px;
 `;
 const img = styled.div`
 width: 80%
@@ -33,7 +33,7 @@ height: 80%
 
 const Font = styled.div`
 font-size: ${props =>(props.primary ? `2rem` : `1.0rem`)};
-color: #black;
+color: black;
 display: flex;
 align-items: center;
 padding-bottom: ${props =>(props.primary ? `30px` : `20px`)};
